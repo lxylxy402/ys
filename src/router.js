@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Contactus from './views/contactUs/contactUs.vue'
 import newHtml from './views/newHtml/index.vue'
+import news from './views/news/news.vue'
+import newDetail from './views/news/newDetail.vue'
 
 Vue.use(Router)
 
@@ -30,6 +32,17 @@ export default new Router({
         {
             path: '/newhtml',
             component: newHtml
+        },
+        {
+            path: '/news',
+            component: news,
+            children: [
+                {
+                    path: 'newsDetail',
+                    name: 'newDetail',
+                    component: newDetail
+                }
+            ]
         }
     ]
 })

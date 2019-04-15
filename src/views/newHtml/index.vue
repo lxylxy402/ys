@@ -1,3 +1,5 @@
 <template>
-    <div></div>
+    <div>
+        很班邦
+    </div>
 </template>

@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+import  './index.less'
 import Header from '@/views/header/header.vue'
 import PhoneHead from '@/views/header/header2.vue'
 export default {
@@ -41,14 +42,4 @@ export default {
     }
 }
 </script>
-<style lang="less">
-a {
-    text-decoration: none;
-    out-line: none;
-    color: #fff;
-}
-.bgColor {
-    background:#076ce0;
-    color:#fff;
-}
-</style>
+

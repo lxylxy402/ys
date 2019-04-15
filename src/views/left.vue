@@ -3,7 +3,7 @@
         <div class='shadow'>
             <div class='contact'>
                 <span class='margLeft'>
-                    联系我们
+                    栏目导航
                 </span>
             </div>
             <div  v-for='(item,index) in title' :key='index'>
@@ -103,6 +103,7 @@ export default {
 </script>
 <style lang='less'>
 .left {
+    font-size: 16px;
     width: 210px;
     .shadow {
         box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
@@ -122,7 +123,7 @@ export default {
         line-height: 26px;
         color: #666666;
         font-weight: normal;
-        font-size: 1.4 rem;
+        font-size: 14px;
         padding: 7px 10px;
         cursor: pointer;
     }
@@ -165,7 +166,7 @@ export default {
     .timeChild {
         padding: 0 15px 5px;
         color: #666;
-        font-size: 1.4rem;
+        font-size: 14px;
     }
     .wxpng {
         background: url(../assets/images/wx.png) no-repeat;

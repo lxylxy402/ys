@@ -6,7 +6,7 @@
             <div class='right' :style="{width: flag ? '945px' : '100%'}">
                 <el-row>
                     <el-col :xs='24' :sm='24'>
-                        <div class='bgColor title'>
+                        <div class='bgColor bgtitle'>
                             <span style='margin-left: 20px;'>联系我们</span>
                         </div>
                         <div class='text'>
@@ -150,10 +150,10 @@ export default {
 
 <style lang='less'>
 html,body{margin:0;padding:0;}
-.iw_poi_title {color:#CC5522;font-size:1.4rem;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+.iw_poi_title {color:#CC5522;font-size:1.2rem;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
 .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
 .contactUs {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     .section {
         width:1200px;
         margin: auto;
@@ -166,15 +166,11 @@ html,body{margin:0;padding:0;}
         // float: right;
         width:945px;
     }
-    .title {
-        height: 45px;
-        line-height: 45px;
-    }
     .text {
         padding: 30px;
         line-height: 2;
         color: #666666;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
     .textTitle {
         color: rgb(7, 108, 224)

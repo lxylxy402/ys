@@ -7,7 +7,7 @@
         <img src="@/assets/images/user.jpg" alt="">
     </div>
     <div style='height: 3.15rem;'></div>
-    <div style='z-index: 500;position: absolute;' v-if='showMenu'>
+    <div style='z-index: 500;position: fixed;' v-if='showMenu'>
         <el-menu>
             <el-menu-item v-for='(item,index) in title' :key='index' @click='handleLink(item)'>
                 <!-- <i class="el-icon-menu"></i> -->
