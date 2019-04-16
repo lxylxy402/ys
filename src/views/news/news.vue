@@ -1,6 +1,6 @@
 <template>
     <div class='news'>
-        <div class='section' :style="{width: flag ? '1200px' : '100%'}">
+        <div class='section' :style="{width: flag ? '1200px' : '100%','margin-top': flag ? '40px' : '0'}">
             <left></left>
             <div class='right' :style="{width: flag ? '945px' : '100%'}">
                 <div class='bgColor bgtitle'>
@@ -43,7 +43,7 @@ export default {
     data () {
         return {
             flag: true,
-            isText: true
+            // isText: true
         }
     },
     components: {
@@ -51,14 +51,12 @@ export default {
     },
     methods: {
         handleShowText (id) {
-            this.isText = false
-            this.$router.push({path:'/news/newDetail', query:{id: id}})
+            // this.isText = false
+            this.$router.push({path:'/newsDetails', query:{id: id}})
         }
     },
     mounted () {
         this.flag = isPc()
-        console.log('this.flag')
-        console.log(isPc())
     }
 }
 </script>
@@ -68,7 +66,6 @@ export default {
         margin: auto;
         display: flex;
         justify-content: space-between;
-        margin-top: 40px;
     }
     .text {
         font-size: 0.9rem;

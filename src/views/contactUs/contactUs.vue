@@ -1,6 +1,7 @@
 <template>
     <div class='contactUs'>
-        <img src="@/assets/images/lxwm.jpg" alt="" style="width:100%;height: 380px;">
+        <img src="@/assets/images/lxwm.jpg" alt="" style="width:100%;height: 380px;" v-if='flag'>
+        <img src="@/assets/images/header2.png" alt="" style="width:100%" v-else>
         <div class='section' :style="{width: flag ? '1200px' : '100%'}">
             <left></left>
             <div class='right' :style="{width: flag ? '945px' : '100%'}">

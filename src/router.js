@@ -36,13 +36,18 @@ export default new Router({
         {
             path: '/news',
             component: news,
-            children: [
-                {
-                    path: 'newsDetail',
-                    name: 'newDetail',
-                    component: newDetail
-                }
-            ]
+            // children: [
+            //     {
+            //         path: 'newsDetail',
+            //         name: 'newDetail',
+            //         component: newDetail
+            //     }
+            // ]
+        },
+        {
+            path: '/newsDetails',
+            name: 'newDetail',
+            component: newDetail
         }
     ]
 })
