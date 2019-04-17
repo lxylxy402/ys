@@ -6,6 +6,7 @@ import newHtml from './views/newHtml/index.vue'
 import news from './views/news/news.vue'
 import newDetail from './views/news/newDetail.vue'
 import enlist from './views/enlist/enlist.vue'
+import condition from './views/condition/condition.vue'
 
 Vue.use(Router)
 
@@ -16,7 +17,7 @@ export default new Router({
         {
             path: '/',
             name: 'home',
-            component: Home
+            component: Contactus
         },
         {
             path: '/about',
@@ -54,6 +55,12 @@ export default new Router({
             path: '/enlist',
             name: 'enlist',
             component: enlist
+        },
+        {
+            // 学院概况
+            path: '/condition',
+            name: 'condition',
+            component: condition
         }
     ]
 })
