@@ -1,12 +1,12 @@
 <template>
     <div style="height:100%" class="main_index">
         <div class="block" >
-            <el-carousel trigger="click" :class="flag?'':'telcss'" >
+            <el-carousel trigger="click" :class="flag?'':'telcss'" :height="flag?'32.1rem':'10.1rem'">
                 <el-carousel-item >
-                    <img class="body_img" :style="{height:flag?'19rem':'10rem'}" src="../../assets/images/headerup1.jpg" alt="" style="width:100%">
+                    <img class="body_img" :style="{height:flag?'32rem':'10rem'}" src="../../assets/images/headerup1.jpg" alt="" style="width:100%">
                 </el-carousel-item>
                 <el-carousel-item >
-                    <img class="body_img" :style="{height:flag?'19rem':'10rem'}"  src="../../assets/images/headerup2.jpg" alt="" style="width:100%">
+                    <img class="body_img" :style="{height:flag?'34rem':'10rem'}"  src="../../assets/images/headerup2.jpg" alt="" style="width:100%">
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -277,7 +277,8 @@
             /* border:1px solid red; */
         }
         .tel_neck{
-            width:100%;
+            // width:100%;
+            width:calc(~'100% - 2px');
             height:140px;
             margin-top: 20px;
             font-size: 0.6rem;
