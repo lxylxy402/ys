@@ -1,12 +1,12 @@
 <template>
     <div style="height:100%" class="main_index">
-        <div class="block">
+        <div class="block" >
             <el-carousel trigger="click" :class="flag?'':'telcss'" >
                 <el-carousel-item >
-                    <img class="body_img" src="../../assets/images/headerup1.jpg" alt="" style="width:100%">
+                    <img class="body_img" :style="{height:flag?'19rem':'10rem'}" src="../../assets/images/headerup1.jpg" alt="" style="width:100%">
                 </el-carousel-item>
                 <el-carousel-item >
-                    <img class="body_img" src="../../assets/images/headerup2.jpg" alt="" style="width:100%">
+                    <img class="body_img" :style="{height:flag?'19rem':'10rem'}"  src="../../assets/images/headerup2.jpg" alt="" style="width:100%">
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -57,32 +57,32 @@
                 </el-col>
             </el-row>
         </div>
-        <div class="body common_block" :style="{paddingTop:flag?'1px':'20px'}">
-            <el-row :style="{height:flag?'300px':'100px'}">
+        <div class="body common_block" :style="{paddingTop:flag?'1px':'1rem'}">
+            <el-row :style="{height:flag?'17rem':'6rem'}">
                 <el-col :span=6>
                     <div class='body_blockimg' >
-                        <div style="position: relative;top: 42px;z-index: 3;">
-                            <p style="font-size:1rem;color:white">
+                        <div :style="{position: 'relative',top:flag?'3.5rem':'1rem',zIndex: 3}">
+                            <span :style="{fontSize:flag?'1.2rem':'0.7rem',color:'white'}">
                                 走进我们
-                            </p>
-                            <hr style="width:35px">
-                            <span style="display:inline-block;width:80%;font-size:0.6rem;color:white">
+                            </span>
+                            <hr style="width:2rem">
+                            <span style="display:inline-block;width:80%;font-size:0.3rem;color:white">
                     欢饮走进我们学院，各个学项均获得世界教育认可</span>
-                            <div class="button">提交</div>
+                            <div :class="flag?'button_tel':'button'">提交</div>
                         </div>
                         <img class="body_img" src="../../assets/images/bodyf1.png" alt="" 
-                        :style="{position:'relative',top:flag?'-171px':'-203px'}">
+                        :style="{position:'relative',top:flag?'-8.6rem':'-9rem'}">
                     </div>
                 </el-col>
                 <el-col :span=6>
                     <div class='body_blockimg'>
                         <div v-show="bodyshowf" @mouseenter="bodyshowf=true" @mouseleave="bodyshowf=false"
-                             class='body_div' style= "line-height: 296px;"
+                             class='body_div' :style="{lineHeight:flag?'10rem':'6rem',fontSize:flag?'1.2rem':'0.6rem'}"
                         >
                             <span>国家任务生</span>
                         </div>
                         <img class="body_img" @mouseenter="bodyshowf=true" @mouseleave="bodyshowf=false"
-                             :style="{position:'relative',top:bodyshowf?-300+'px':0+'px'}" src="../../assets/images/bodyf4.png" alt="">
+                             :style="{position:'relative',top:bodyshowf?(flag?-17+'rem':-6+'rem'):0+'rem'}" src="../../assets/images/bodyf4.png" alt="">
                     </div>
                 </el-col>
                 <el-col :span=12>
@@ -90,19 +90,19 @@
                         <div v-show="bodyshows" @mouseenter="bodyshows=true" @mouseleave="bodyshows=false"
                              class='body_div'
                         >
-                            <div style=" padding:34% 4% ">
+                            <div :style="{paddingTop:flag?'3rem':'1rem',paddingLeft:flag?'1rem':'0.5rem',fontSize:flag?'1.2rem':'0.6rem'}">
                                 <span style="display:block">实现2个对接</span>
                                 <span>课程兼容中外双方优势，小班授课，双语</span>
                             </div>
 
                         </div>
                         <img class="body_img"  @mouseenter="bodyshows=true" @mouseleave="bodyshows=false"
-                             :style="{position:'relative',top:bodyshows?-300+'px':0+'px'}"
+                             :style="{position:'relative',top:bodyshows?(flag?-17+'rem':-6+'rem'):0+'rem'}"
                              src="../../assets/images/header2.png" alt="">
                     </div>
                 </el-col>
             </el-row>
-            <el-row :style="{height:flag?'300px':'100px'}">
+            <el-row :style="{height:flag?'17rem':'6rem'}">
                 <el-col :span=6>
                     <div class='body_blockimg'>
                         <img class="body_img" src="../../assets/images/bodyf5.png" alt="">
@@ -126,12 +126,12 @@
             </el-row>
 
         </div>
-        <div class="body_table common_block">
+        <div class="body_table common_block" style='border:0px solid white'>
             <el-row>
-                <el-col :xs='24' :sm='12'>
-                    <table style="">
+                <el-col :span=flag?12:24 >
+                    <table style=" border:1px solid rgba(141, 153, 153, 0.7);">
                         <thead class="body_table_head">
-                        <tr style="color:white;font:1rem">
+                        <tr :style="{color:'white',font:flag?'1rem':'0.6rem'}">
                             <td>学校新闻</td>
                             <td>MORE+</td>
                         </tr>
@@ -145,10 +145,10 @@
                         </tbody>
                     </table>
                 </el-col>
-                <el-col :xs='24' :sm='12'>
-                    <table style="">
+                <el-col :span=flag?12:24 :style="{marginTop:flag?'':'0.5rem',paddingLeft:flag?'2px':''}">
+                    <table style=" border:1px solid rgba(141, 153, 153, 0.7);">
                         <thead class="body_table_head">
-                        <tr style="color:white;font:1rem">
+                        <tr  :style="{color:'white',font:flag?'1rem':'0.6rem'}">
                             <td> 学校新闻</td>
                             <td>MORE+</td>
                         </tr>
@@ -164,11 +164,12 @@
                 </el-col>
             </el-row>
         </div>
-        <dir class="footer common_block">
+        <dir class="footer common_block" >
             <marquee id="affiche" align="middle"   behavior="alternate"
                      bgcolor="#FF0000" direction="left" height="176" width="100%"
                      hspace="50" vspace="20" loop="-1" scrollamount="10"
                      scrolldelay="100" style="margin:20px 0px;background-color:rgba(248, 248, 248, 1)"
+                     :style="{marginTop:flag?'3rem':'1rem'}"
                      onMouseOut="this.start()" onMouseOver="this.stop()">
                 <img src="../../assets/images/footer1.png" alt="">
                 <img src="../../assets/images/footer2.png" alt="">
@@ -232,16 +233,26 @@
     .main_index{
         .body_img{
             width:100%;
-            height:100%
+        height:100%;
         }
 
         .button{
-            width:140px;
-            height:45px;
+            width:2rem;
+            height:1rem;
             border:1px solid white;
             color:white;
-            font-size:14px;
-            line-height: 45px;
+            font-size:0.6rem;
+            line-height: 1rem;
+            text-align:center;
+            margin:14px auto;
+        }
+        .button_tel{
+            width:4rem;
+            height:2rem;
+            border:1px solid white;
+            color:white;
+            font-size:1rem;
+            line-height: 2rem;
             text-align:center;
             margin:14px auto;
         }
@@ -284,7 +295,8 @@
 
         }
         .telcss{
-            height:133px !important;
+            height:10rem !important;
+            overflow: hidden;
         }
         .body .el-row{
         
@@ -297,8 +309,7 @@
             background:rgba(7, 108, 224, 0.698);
             color:white;
             text-align:center;
-
-            font-size: 0.9rem;
+            font-size: 0.7rem;
         }
         .body .el-row .el-col{
             height:100%;
@@ -308,31 +319,31 @@
             height:100%;
         }
         .body_table{
-            height:250px;
-            padding-right:5px;
+           // height:10rem;
+            // padding-right:5px;
         }
         .body_table table{
             text-align:left;
             width:100%;
-            height:250px;
+            height:10rem;
             background-color:  rgba(248, 248, 248, 1);
             color:#666666;
             font-size:0.6rem;
-        border-radius: 5px;
+            border-radius: 5px;
         }
         .body_table .el-row .el-col:first-child{
-            padding-right:10px;
+            // padding-right:1rem;
     
         }
         .body_table .el-row .el-col:last-child{
           
-            padding-left:10px;
+            // padding-left:1rem;
         }
 
         .body_table table tr td:first-child{
             width:80%;
             margin:3px 4px;
-              padding-left:12px;
+            padding-left:0.6rem;
         }
         .body_table table td{
             /* border-bottom: 1px solid red; */
@@ -345,7 +356,7 @@
         }
         .footer{
             height:231px;
-            padding:0px 0px;
+            padding:0px 0px !important;
         }
         .el-carousel__item h3 {
             color: #475669;
