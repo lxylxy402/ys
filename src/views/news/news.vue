@@ -70,7 +70,7 @@ export default {
     .text {
         font-size: 0.9rem;
         line-height: 2rem;
-        background: #efefef;
+        background: #f9f9f9;
     }
     .sec {
         cursor: pointer;

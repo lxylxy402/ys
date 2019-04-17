@@ -5,6 +5,7 @@ import Contactus from './views/contactUs/contactUs.vue'
 import newHtml from './views/newHtml/index.vue'
 import news from './views/news/news.vue'
 import newDetail from './views/news/newDetail.vue'
+import enlist from './views/enlist/enlist.vue'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
             path: '/newsDetails',
             name: 'newDetail',
             component: newDetail
+        },
+        {
+            path: '/enlist',
+            name: 'enlist',
+            component: enlist
         }
     ]
 })

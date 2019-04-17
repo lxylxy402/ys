@@ -9,7 +9,7 @@ export default new Vuex.Store({
         { name: '首页', link: '/newhtml', haveBorder: true, num: 0 },
         { name: '学院概况', link: '/home', haveBorder: true, num: 1 },
         { name: '新闻动态', link: '/news', haveBorder: true, num: 2 },
-        { name: '网上报名', link: '/new', haveBorder: true, num: 3 },
+        { name: '网上报名', link: '/enlist', haveBorder: true, num: 3 },
         { name: '联系我们', link: '/contactUs', haveBorder: false, num: 4 }
     ],
     chooseLink: 0,
