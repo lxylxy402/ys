@@ -1,12 +1,13 @@
 <template>
     <div style="height:100%" class="main_index">
         <div class="block" >
-            <el-carousel trigger="click" :class="flag?'':'telcss'" :height="flag?'32.1rem':'10.1rem'">
+        
+            <el-carousel trigger="click" arrow="never"  :style="{height:flag?'25rem':'10rem'}" class="telcss" >
                 <el-carousel-item >
-                    <img class="body_img" :style="{height:flag?'32rem':'10rem'}" src="../../assets/images/headerup1.jpg" alt="" style="width:100%">
+                    <img class="body_img" :style="{height:flag?'25rem':'10rem'}" src="../../assets/images/headerup1.jpg" alt="" style="width:100%">
                 </el-carousel-item>
                 <el-carousel-item >
-                    <img class="body_img" :style="{height:flag?'34rem':'10rem'}"  src="../../assets/images/headerup2.jpg" alt="" style="width:100%">
+                    <img class="body_img" :style="{height:flag?'25rem':'10rem'}"  src="../../assets/images/headerup2.jpg" alt="" style="width:100%">
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -57,7 +58,7 @@
                 </el-col>
             </el-row>
         </div>
-        <div class="body common_block" :style="{paddingTop:flag?'1px':'1rem'}">
+        <div v-if='flag' class="body common_block" :style="{paddingTop:flag?'1px':'1rem'}">
             <el-row :style="{height:flag?'17rem':'6rem'}">
                 <el-col :span=6>
                     <div class='body_blockimg' >
@@ -126,6 +127,53 @@
             </el-row>
 
         </div>
+        <div v-else>
+            <el-row style="margin:1rem auto">
+                <el-col :span='24' style="text-align:center;font-size:1.3rem">
+                    <span >互动教学模式</span>
+                </el-col>
+            </el-row>
+            <el-row style="margin:1rem auto">
+                <el-col :span="11">
+                    <div  style="text-align:center">
+    
+                        <img style="width:95%;height:12rem;margin-left:1rem"
+                              src="../../assets/images/bodyf3.png" alt="">
+                              <span style="display:block;margin-top:1rem">2+2国际版</span>
+                    </div> 
+                </el-col>
+                <el-col :span='2'>
+                    <br>
+                </el-col>
+                 <el-col :span="11">
+                    <div style="text-align:center">
+                        <img style="width:95%;height:12rem;margin-right:1rem"
+                              src="../../assets/images/bodyf5.png" alt="">
+                               <span style="display:block;margin-top:1rem">国家任务生</span>
+                    </div> 
+                </el-col>
+            </el-row>
+             <el-row style="margin:1rem auto">
+                <el-col :span="11">
+                    <div  style="text-align:center">
+    
+                        <img style="width:95%;height:12rem%;margin-left:1rem"
+                              src="../../assets/images/bodyf6.png" alt="">
+                              <span style="display:block;margin-top:1rem">坚守1标准</span>
+                    </div> 
+                </el-col>
+                <el-col :span='2'>
+                    <br>
+                </el-col>
+                 <el-col :span="11">
+                    <div style="text-align:center">
+                        <img style="width:95%;height:12rem%;margin-right:1rem"
+                              src="../../assets/images/bodyf2.png" alt="">
+                               <span style="display:block;margin-top:1rem">实现2对接</span>
+                    </div> 
+                </el-col>
+            </el-row>
+        </div>
         <div class="body_table common_block" style='border:0px solid white'>
             <el-row>
                 <el-col :span=flag?12:24 >
@@ -164,12 +212,12 @@
                 </el-col>
             </el-row>
         </div>
-        <dir class="footer common_block" >
+        <dir class="footer common_block" style="text-align:center" >
             <marquee id="affiche" align="middle"   behavior="alternate"
-                     bgcolor="#FF0000" direction="left" height="176" width="100%"
+                     bgcolor="white" direction="left" height="176" width="90%"
                      hspace="50" vspace="20" loop="-1" scrollamount="10"
-                     scrolldelay="100" style="margin:20px 0px;background-color:rgba(248, 248, 248, 1)"
-                     :style="{marginTop:flag?'3rem':'1rem'}"
+                     scrolldelay="100" style="margin:20px 0px;background-color:rgba(248, 248, 248, 0.5);text-align:center"
+                     :style="{marginTop:flag?'3rem':'1rem',width:flag?'90%':'17rem'}"
                      onMouseOut="this.start()" onMouseOver="this.stop()">
                 <img src="../../assets/images/footer1.png" alt="">
                 <img src="../../assets/images/footer2.png" alt="">
@@ -231,6 +279,9 @@
 
 <style lang="less">
     .main_index{
+        .el-carousel__container{
+            height:420px 
+        }
         .body_img{
             width:100%;
         height:100%;
@@ -277,8 +328,7 @@
             /* border:1px solid red; */
         }
         .tel_neck{
-            // width:100%;
-            width:calc(~'100% - 2px');
+            width:100%;
             height:140px;
             margin-top: 20px;
             font-size: 0.6rem;
@@ -296,7 +346,7 @@
 
         }
         .telcss{
-            height:10rem !important;
+           
             overflow: hidden;
         }
         .body .el-row{
